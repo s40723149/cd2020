@@ -6,4 +6,4 @@
 
 CD 2020 gitter:https://gitter.im/mdecourse/cd2020
 
-個人youtube影片:https://www.youtube.com/feed/my_videos
+個人youtube影片:https://www.youtube.com/channel/UCmZnW0__-vxQxI6FoxnFiNg
