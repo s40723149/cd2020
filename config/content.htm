@@ -112,7 +112,54 @@
 <p><span>上圖是修改前的車子</span></p>
 <p><img alt="" height="298" src="/images/車子修改.PNG" width="529"/></p>
 <p>這是修改後的車子</p>
-<h1>Webots tutorial 內容翻譯</h1>
+<h3>IPv4與IPv6</h3>
+<p>首先到<a href="http://mde.tw/cd2020pj1/content/Ubuntu.html">http://mde.tw/cd2020pj1/content/Ubuntu.html</a>使用學校 gm 帳號下載<a href="https://drive.google.com/open?id=143jFMheM1xjLxhLkSAouThLzj3WUYX6_">Ubuntu20_cd2020pj1.ova</a> <span><a href="https://drive.google.com/open?id=13Gqwyj0CGR6wa9dZg_BmlCLv5cNYWQJ_">Ubuntu2020_w12.ova</a>  這兩個檔案</span></p>
+<p><span>操作流程參考:<a href="https://s40723150.github.io/cd2020/content/VirtualBox.html">https://s40723150.github.io/cd2020/content/VirtualBox.html</a></span></p>
+<p><span>將上述兩個.ova檔匯入virtualbox後，在VirtualBox→Files→Preferences<span>→Network<br/>新增一個網路設定，支援DHCP和IPV6</span>。</span></p>
+<p><span><img alt="" height="331" src="/images/2020-06-13 13-30-34.jpg" width="442"/></span></p>
+<p><span>再來開啟cd2020pj1的虛擬主機設定NAT的Port號</span></p>
+<p><span>進到此畫面輸入密碼:kmol2020(num lock預設是關閉的記得打開)</span></p>
+<p><span><img alt="" height="352" src="/images/2020-06-13 13-47-20.jpg" width="537"/></span></p>
+<p><span>登入之後按左上角的activities進到下圖→開啟LEXterminal</span></p>
+<p><span><img alt="" height="356" src="/images/2020-06-13 13-50-06.jpg" width="539"/></span></p>
+<p><span>輸入ifconfig找到IPv4跟IPv6</span></p>
+<p><span><img alt="" height="386" src="/images/2020-06-13 13-51-01.jpg" width="526"/></span></p>
+<h4><strong>IPv4</strong></h4>
+<p><span><img alt="" height="367" src="/images/2020-06-13 13-40-49.jpg" width="499"/></span></p>
+<h4><strong>IPv6</strong></h4>
+<p><strong>連外部一定要用FD開頭</strong></p>
+<p><strong><img alt="" height="371" src="/images/2020-06-13 13-41-21.jpg" width="506"/></strong></p>
+<h2>week14</h2>
+<p>配置IPv6在指定網路位置外部連線</p>
+<p>每個人依照以下規則分配到唯一的IPv6網路位置</p>
+<div class="container">
+<div class="line number1 index0 alt2"><strong><code class="html plain">2001:288:6004:17:2020:1::7101/64</code></strong></div>
+<div class="line number2 index1 alt1"><strong> </strong></div>
+<div class="line number3 index2 alt2"><strong><code class="html plain">2001:288:6006:17 為機械設計系網段</code></strong></div>
+<div class="line number4 index3 alt1"><strong><code class="html spaces">                            </code><code class="html plain">2020 為年份</code></strong></div>
+<div class="line number5 index4 alt2"><strong><code class="html spaces">                            </code><code class="html plain">1 為 cda, 2 為 cdb, 3 為 wcm, 4 為 wcmj</code></strong></div>
+<div class="line number6 index5 alt1"><strong><code class="html spaces">                            </code><code class="html plain">71 為 407231 表示甲班, 72 為乙班</code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html spaces">                            </code><code class="html plain">01 則為該班學號</code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html plain"></code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html plain">依照此規則我被分配到的網路位置是2001:288:6004:17:2020:1::7149</code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html plain"></code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html plain">進入控制台→網路和網際網路→左邊標籤的乙太網路→變更介面卡選項→乙太網路按右鍵→內容→找到IPv6點兩下按照下圖設定即可</code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html plain"></code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html plain"><img alt="" height="454" src="/images/2020-06-13 14-10-00.jpg" width="545"/></code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html plain"></code></strong></div>
+<div class="line number7 index6 alt2"><code class="html plain">防火牆和proxy要記得關掉</code></div>
+<div class="line number7 index6 alt2">
+<p>如果還是不能正常執行</p>
+<p>可以依照下列步驟排除問題</p>
+<ol>
+<li>檢查虛擬主機網路是否正常運作(檢查網路設定是否正確)</li>
+<li>在虛擬主機上是否可以成功連上wsgi.py(確認ifconfig查到的IP是否fd開頭，wsgi.py的ID是否為查到的IP)</li>
+<li>外部是否可以成功連上(確認網卡的IPv6設定是否正確，防火牆和proxy是否關閉，網址的Port號是否與設定的相同，若分配到的網路位置連不到可先換成::1看是否連的上)</li>
+</ol>
+<p></p>
+</div>
+<div class="line number7 index6 alt2"><strong><code class="html plain"></code></strong></div>
+</div><h1>Webots tutorial 內容翻譯</h1>
 <h2>常見問題</h2>
 <p>教材來源:<a href="https://cyberbotics.com/doc/guide/general-faq">https://cyberbotics.com/doc/guide/general-faq</a></p>
 <h4><strong>一般常見問題</strong></h4>

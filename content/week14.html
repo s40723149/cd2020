@@ -156,10 +156,37 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='每周進度.html'>Next</a> >> 每周進度<br /><h1>About</h1>
-<p>第一組組員名單</p>
-<p>group 1 <br/>Repository: <a href="https://github.com/s40723104/cd2020">40723104</a> | Site: <a href="https://s40723104.github.io/cd2020">40723104</a><br/>Repository: <a href="https://github.com/s40723107/cd2020">40723107</a> | Site: <a href="https://s40723107.github.io/cd2020">40723107</a><br/>Repository: <a href="https://github.com/s40723114/cd2020">40723114</a> | Site: <a href="https://s40723114.github.io/cd2020">40723114</a> <span>(group leader)</span><br/>Repository: <a href="https://github.com/s40723115/cd2020">40723115</a> | Site: <a href="https://s40723115.github.io/cd2020">40723115</a><br/>Repository: <a href="https://github.com/s40723118/cd2020">40723118</a> | Site: <a href="https://s40723118.github.io/cd2020">40723118</a><br/>Repository: <a href="https://github.com/s40723122/cd2020">40723122</a> | Site: <a href="https://s40723122.github.io/cd2020">40723122</a><br/>Repository: <a href="https://github.com/s40723123/cd2020">40723123</a> | Site: <a href="https://s40723123.github.io/cd2020">40723123</a><br/>Repository: <a href="https://github.com/s40723140/cd2020">40723140</a> | Site: <a href="https://s40723140.github.io/cd2020">40723140</a><br/>Repository: <a href="https://github.com/s40723149/cd2020">40723149</a> | Site: <a href="https://s40723149.github.io/cd2020">40723149</a><br/>Repository: <a href="https://github.com/s40723151/cd2020">40723151</a> | Site: <a href="https://s40723151.github.io/cd2020">40723151</a><br/>Repository: <a href="https://github.com/s40723153/cd2020">40723153</a> | Site: <a href="https://s40723153.github.io/cd2020">40723153</a><br/>Repository: <a href="https://github.com/s40723154/cd2020">40723154</a> | Site: <a href="https://s40723154.github.io/cd2020">40723154</a><br/>Repository: <a href="https://github.com/s40723155/cd2020">40723155</a> | Site: <a href="https://s40723155.github.io/cd2020">40723155</a></p>
-<br /> <a href='每周進度.html'>Next</a> >> 每周進度</div>
+    <div id="tipue_search_content">IPv4與IPv6 << <a href='IPv4與IPv6.html'>Previous</a> <a href='Webots tutorial 內容翻譯.html'>Next</a> >> Webots tutorial 內容翻譯<br /><h1>week14</h1>
+<p>配置IPv6在指定網路位置外部連線</p>
+<p>每個人依照以下規則分配到唯一的IPv6網路位置</p>
+<div class="container">
+<div class="line number1 index0 alt2"><strong><code class="html plain">2001:288:6004:17:2020:1::7101/64</code></strong></div>
+<div class="line number2 index1 alt1"><strong> </strong></div>
+<div class="line number3 index2 alt2"><strong><code class="html plain">2001:288:6006:17 為機械設計系網段</code></strong></div>
+<div class="line number4 index3 alt1"><strong><code class="html spaces">                            </code><code class="html plain">2020 為年份</code></strong></div>
+<div class="line number5 index4 alt2"><strong><code class="html spaces">                            </code><code class="html plain">1 為 cda, 2 為 cdb, 3 為 wcm, 4 為 wcmj</code></strong></div>
+<div class="line number6 index5 alt1"><strong><code class="html spaces">                            </code><code class="html plain">71 為 407231 表示甲班, 72 為乙班</code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html spaces">                            </code><code class="html plain">01 則為該班學號</code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html plain"></code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html plain">依照此規則我被分配到的網路位置是2001:288:6004:17:2020:1::7149</code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html plain"></code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html plain">進入控制台→網路和網際網路→左邊標籤的乙太網路→變更介面卡選項→乙太網路按右鍵→內容→找到IPv6點兩下按照下圖設定即可</code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html plain"></code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html plain"><img alt="" height="454" src="./../images/2020-06-13 14-10-00.jpg" width="545"/></code></strong></div>
+<div class="line number7 index6 alt2"><strong><code class="html plain"></code></strong></div>
+<div class="line number7 index6 alt2"><code class="html plain">防火牆和proxy要記得關掉</code></div>
+<div class="line number7 index6 alt2">
+<p>如果還是不能正常執行</p>
+<p>可以依照下列步驟排除問題</p>
+<ol>
+<li>檢查虛擬主機網路是否正常運作(檢查網路設定是否正確)</li>
+<li>在虛擬主機上是否可以成功連上wsgi.py(確認ifconfig查到的IP是否fd開頭，wsgi.py的ID是否為查到的IP)</li>
+<li>外部是否可以成功連上(確認網卡的IPv6設定是否正確，防火牆和proxy是否關閉，網址的Port號是否與設定的相同，若分配到的網路位置連不到可先換成::1看是否連的上)</li>
+</ol>
+<p></p>
+</div>
+<div class="line number7 index6 alt2"><strong><code class="html plain"></code></strong></div>
+</div><br />IPv4與IPv6 << <a href='IPv4與IPv6.html'>Previous</a> <a href='Webots tutorial 內容翻譯.html'>Next</a> >> Webots tutorial 內容翻譯</div>
         
     <!-- footer -->
       <div class="container">
